@@ -14,12 +14,13 @@ const Header = props => {
 };
 
 const mapStateToProps = state => {
+  console.log(state.carReducer);
   return {
-    car: state.carReducer.car
-      // price: state.carReducer.car.price,
-      // name: state.carReducer.car.name,
-      // image:
-      //   state.carReducer.image.name
+    car: {
+      price: state.carReducer.car.price,
+      name: state.carReducer.car.name,
+      image: state.carReducer.car.image
+    }
   };
 }
 
