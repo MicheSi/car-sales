@@ -11,9 +11,9 @@ const Total = props => {
 
 const mapStateToProps = state => {
   return {
-    additionalPrice: state.carReducer.additionalPrice,
+    additionalPrice: state.additionalPrice,
     car: {
-      price: state.carReducer.car.price
+      price: state.car.price
     }
   }
 }
