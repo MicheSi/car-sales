@@ -25,7 +25,10 @@ const initialState = {
         car: {
           ...state.car,
           features: state.car.features.includes(action.payload) ? [...state.car.features] : [...state.car.features, action.payload]
-        }
+        },
+        additionalFeatures: (state.additionalFeatures.filter(feature => {
+          return feature !== action.payload
+        }))
       };
       case 'REMOVE_FEATURE':
         return {
