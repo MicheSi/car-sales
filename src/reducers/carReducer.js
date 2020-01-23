@@ -39,7 +39,8 @@ const initialState = {
             features: (state.car.features.filter(feature => {
               return feature !== action.payload
             }))
-          }
+          },
+          additionalFeatures: state.additionalFeatures.includes(action.payload) ? [...state.additionalFeatures] : [...state.additionalFeatures, action.payload]
         }
       default:
         return state;
